@@ -4,7 +4,7 @@
   "description": "Convert your play routes to a nicer json format",
   "main": "index.js",
   "scripts": {
-    "test": "grunt"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
