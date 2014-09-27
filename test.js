@@ -7,7 +7,7 @@ function testFailed(err) {
 
 // TODO: Setup proper tests
 fs.readFile('testRoutes', function(err, data) {
-  var result = routesToJSON(data.toString());
+  var result = JSON.parse(routesToJSON(data.toString())).routes;
   var zero = result[0];
   var one = result[1];
   var two = result[2];

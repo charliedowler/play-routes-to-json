@@ -1,6 +1,6 @@
 module.exports = function(raw) {
   var lines = raw.split('\n');
-  var newLines = [];
+  var newLines = { routes: [] };
   lines.forEach(function(line) {
     line = line.trim();
     line = line.replace(/#.*/, '');
@@ -17,8 +17,8 @@ module.exports = function(raw) {
       }
       newLine[2] = str;
       newLine.splice(3, newLine.length - 3);
-      newLines.push({type: newLine[0], path: newLine[1], controller: newLine[2]});
+      newLines.routes.push({type: newLine[0], path: newLine[1], controller: newLine[2]});
     }
   });
-  return newLines;
+  return JSON.stringify(newLines);
 };

@@ -15,7 +15,8 @@ $ npm install --save play-routes-to-json
 var routesToJSON = require('play-routes-to-json');
 var fs = require('fs');
 fs.readFile('conf/routes', function(err, data) {
-  console.log(routesToJSON(data));
+  var parsed = routesToJSON(data);
+  console.log(JSON.parse(parsed).routes);
   //=> { type: 'GET', path: '/path/to/action', controller: '@controllers.handleAction()' }
 });
 ```
