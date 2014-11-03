@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/charliedowler/play-routes-to-json/issues"
   },
-  "homepage": "https://github.com/charliedowler/play-routes-to-json"
+  "homepage": "https://github.com/charliedowler/play-routes-to-json",
+  "devDependencies": {
+    "tap": "^0.4.13"
+  }
 }
